@@ -19,11 +19,19 @@ This dataset provides two zips: aggregate and deaths.
 
 The uncompressed data is divided into 5 chunks of approximately 2gb each. For details on columns, please see the file descriptions.
 
-
-
 ## Project Idea
 
-The goal of this project is to analyze player behavior in the popular game Player Unknown's Battlegrounds (PUBG) and use machine learning techniques to classify cheaters and predict recommended strategies for gamers in the game. This is a relevant challenge as cheating is a common problem in online games, and identifying cheaters is important to maintain a fair and enjoyable gaming experience for all players.
+PUBG is a popular online multiplayer game that involves up to 100 players fighting against each other in a shrinking map until only one player or team remains. However, although the number of players is considerable, not much is known about what factors influence the outcome of a match and how players can improve their chances of winning. This project aims to analyze and give real-time suggestions  that lead to the highest probablity of winning based on their statistics, such as kills, assists, damage, survival time, etc., using machine learning techniques.
+
+We plan to first perform exploratory data analysis on the PUBG dataset to gain a better understanding of player behavior and gameplay patterns. This may include analyzing factors such as player rankings, game modes, and weapon usage. We will also investigate correlations between different attributes in the data to identify any useful patterns.
+
+To identify suggections, we plan to use machine learning algorithms such as Random Forests and Support Vector Machine to analyze player data and detect anomalous behavior. We will compare the performance of different classification models and feature representation techniques, such as one-hot encoding and word embeddings, to determine the most effective approach. Besides, we also plan to use the data to predict recommended strategies for gamers in the game. This may involve analyzing successful strategies used by top players and using this information to recommend tactics for other players to improve their performance.
+
+In our vision, there will be basically two majors of suggestions from the model: relative-player-objective map scene analysis and prediction, and relative-player-subjective player behavior suggestions. For example. the former will give the players the approximate area of poison circle. The latter, on the contrary, will give personalized real-time tactic suggestions, such as whether the player should go to battle or search for supplies and equipments.
+
+Overall, this project aims to use machine learning techniques to analyze player behavior in PUBG, and predict recommended strategies for gamers. By doing so, we hope to contribute to a fair and enjoyable gaming experience for all players.
+
+<!-- The goal of this project is to analyze player behavior in the popular game Player Unknown's Battlegrounds (PUBG) and use machine learning techniques to classify cheaters and predict recommended strategies for gamers in the game. This is a relevant challenge as cheating is a common problem in online games, and identifying cheaters is important to maintain a fair and enjoyable gaming experience for all players.
 
 We plan to first perform exploratory data analysis on the PUBG dataset to gain a better understanding of player behavior and gameplay patterns. This may include analyzing factors such as player rankings, game modes, and weapon usage. We will also investigate correlations between different attributes in the data to identify any useful patterns.
 
@@ -33,7 +41,7 @@ In addition to identifying cheaters, we also plan to use the data to predict rec
 
 The step-by-step approach will include pre-processing of the PUBG data by handling missing values, removing outliers, and feature scaling. We will also perform feature engineering to extract meaningful information from the raw data.
 
-Overall, this project aims to use machine learning techniques to analyze player behavior in PUBG, classify cheaters, and predict recommended strategies for gamers. By doing so, we hope to contribute to a fair and enjoyable gaming experience for all players.
+Overall, this project aims to use machine learning techniques to analyze player behavior in PUBG, classify cheaters, and predict recommended strategies for gamers. By doing so, we hope to contribute to a fair and enjoyable gaming experience for all players. -->
 
 
 
@@ -43,6 +51,12 @@ Visual Studio Code, Python3, Jupyter, PyTorch, Scikit-Learn, Pandas, TensorFlow,
 
 ## Work Division
 
+|   | Data Prepossessing | Model Construction & Evaluation | Output analyze and explanation |
+|:-:|:-:|:-:|:-:|
+| Yuheng Zhu [yzhu63] | O | O | X |
+| Mengzhe Wang [mwang39] | X | O | O |
+| Jiayuan Huang [jhuang52] | O | X | O |
+| Nameless[] | X | X | O |
 
 
 ## Paper to Read
@@ -54,3 +68,5 @@ Visual Studio Code, Python3, Jupyter, PyTorch, Scikit-Learn, Pandas, TensorFlow,
 5. Gałka P, Strzelecki A. How randomness affects player ability to predict the chance to win at PlayerUnknown’s Battlegrounds (PUBG)[J]. The Computer Games Journal, 2021, 10: 1-18.
 
 ## Midterm Milestone
+
+The midterm milestones have been divided into above 3 parts in Work Division. In our assumption, by the midterm, the entire first section "Data Prepossessing" and half of second section "Model Construction & Evaluation" should be done. To be more specific, the model should be able to give readable and explanable result based on data, although which may not be useful enough for the purpose of this project.
